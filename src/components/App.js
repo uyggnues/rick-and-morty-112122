@@ -20,9 +20,9 @@ function App() {
   }, [])
   
   const filteredCharacters = characters.filter(character => character.name.toLowerCase().includes(queryChar))
-  
+
   return (
-    <div className="App">
+    <div className="App transparent">
       <SearchForm query={queryChar} setQueryChar={setQueryChar}/>
       <CharactersList characters={filteredCharacters} />
     </div>
