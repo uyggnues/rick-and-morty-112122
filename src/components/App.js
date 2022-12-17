@@ -1,12 +1,29 @@
 import logo from '../logo.svg';
 import './App.css';
-import characters from "../data/characters"
+// import characters from "../data/characters"
 import SearchForm from './SearchForm';
 import CharactersList from './CharactersList';
-import React, {useState} from 'react'
+import {useState, useEffect} from 'react'
 
 function App() {
   const [queryChar, setQueryChar] = useState("")
+  const [characters, setCharacters] = useState([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const resp = await fetch(`http://localhost:3000/characters`)
+        const characterList = await resp.json()
+        setCharacters(characterList)
+      } catch (error) {
+        alert(error)
+      }
+    }
+
+    fetchData()
+
+  }, []);
+  
 
   const filteredCharacters = characters.filter(character => character.name.toLowerCase().includes(queryChar))
 
