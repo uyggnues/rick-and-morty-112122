@@ -613,34 +613,6 @@
       ],
       "url": "https://rickandmortyapi.com/api/character/20",
       "created": "2017-11-04T22:34:53.659Z"
-    },
-    {
-      "name": "Buzz Darkyear",
-      "status": "alive",
-      "species": "human",
-      "type": "Human",
-      "gender": "non-binary",
-      "image": "http://www.pngmart.com/files/6/Buzz-Lightyear-PNG-Transparent-Picture.png",
-      "id": 21
-    },
-    {
-      "name": "Buzz Darkyear",
-      "status": "alive",
-      "species": "human",
-      "type": "Human",
-      "gender": "non-binary",
-      "image": "http://www.pngmart.com/files/6/Buzz-Lightyear-PNG-Transparent-Picture.png",
-      "id": 22
-    },
-    {
-      "name": "Buzz Darkyear",
-      "status": "alive",
-      "species": "human",
-      "type": "Human",
-      "gender": "non-binary",
-      "image": "http://www.pngmart.com/files/6/Buzz-Lightyear-PNG-Transparent-Picture.png",
-      "Name": "testw",
-      "id": 23
     }
   ]
 }

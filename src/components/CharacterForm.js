@@ -7,7 +7,7 @@ const CharacterForm = ({setCharacters}) => {
     // const [species, setSpecies] = useState("")
     // const [type, setType] = useState("")
     // const [gender, setGender] = useState("")
-
+    const [showForm, setShowForm] = useState(false)
     const [newCharacter, setNewCharacter] = useState({
         name: "",
         status: "",
@@ -65,21 +65,22 @@ const CharacterForm = ({setCharacters}) => {
 
     return (
         <div>
-            <form onSubmit={handleSubmit}>
+            <button class="form-btn btn" onClick={() => setShowForm(currentVal => !currentVal)}>{showForm ? "Hide Form" : "Show Form"}</button>
+            {showForm ? <form onSubmit={handleSubmit}>
                 <label htmlFor="name">Name</label>
-                <input type="text" name="name" value={newCharacter.name} onChange={handleChange} />
+                <input type="text" name="name" value={newCharacter.name} onChange={handleChange} /><br />
                 <label htmlFor="image">Image Url</label>
-                <input type="text" name="image" value={newCharacter.image} onChange={handleChange} />
+                <input type="text" name="image" value={newCharacter.image} onChange={handleChange} /><br />
                 <label htmlFor="status">Status</label>
-                <input type="text" name="status" value={newCharacter.status} onChange={handleChange} />
+                <input type="text" name="status" value={newCharacter.status} onChange={handleChange} /><br />
                 <label htmlFor="species">Species</label>
-                <input type="text" name="species" value={newCharacter.species} onChange={handleChange} />
+                <input type="text" name="species" value={newCharacter.species} onChange={handleChange} /><br />
                 <label htmlFor="type">Type</label>
-                <input type="text" name="type" value={newCharacter.type} onChange={handleChange} />
+                <input type="text" name="type" value={newCharacter.type} onChange={handleChange} /><br />
                 <label htmlFor="gender">Gender</label>
-                <input type="text" name="gender" value={newCharacter.gender} onChange={handleChange} />
+                <input type="text" name="gender" value={newCharacter.gender} onChange={handleChange} /><br />
                 <input type="submit" value="Create" />
-            </form>
+            </form> : null}
         </div>
     )
 }
