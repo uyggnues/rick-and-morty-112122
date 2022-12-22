@@ -3,7 +3,7 @@ import Character from "./Character"
 
 const CharactersList = ({characters}) => {
 
-    const characterComponentsList = characters.map(char => <Character {...char} key={char.id}/>)
+    const characterComponentsList = characters.map(char => <Character character={char} key={char.id}/>)
 
     return (
         <div className='CharactersList'>
